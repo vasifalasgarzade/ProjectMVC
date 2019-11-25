@@ -69,7 +69,6 @@ C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\System.Web.WebPag
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\Newtonsoft.Json.xml
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\Antlr3.Runtime.pdb
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csprojAssemblyReference.cache
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csproj.CoreCompileInputs.cache
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csproj.CopyComplete
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.dll
@@ -78,3 +77,4 @@ C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.d
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.SqlServer.dll
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.xml
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csprojAssemblyReference.cache

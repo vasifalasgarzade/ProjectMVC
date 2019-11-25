@@ -132,6 +132,8 @@
     <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobsController.cs" />
+    <Compile Include="Controllers\PagesController.cs" />
+    <Compile Include="Controllers\PostController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -275,6 +277,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\Page\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -311,6 +314,12 @@
     <Content Include="Views\Blog\Grid.cshtml" />
     <Content Include="Views\Blog\Details.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Pages\AboutUs.cshtml" />
+    <Content Include="Views\Pages\Services.cshtml" />
+    <Content Include="Views\Pages\Team.cshtml" />
+    <Content Include="Views\Pages\Faqs.cshtml" />
+    <Content Include="Views\Pages\PricingPlan.cshtml" />
+    <Content Include="Views\Post\PostaJob.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
