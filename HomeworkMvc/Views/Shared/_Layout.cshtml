@@ -1,42 +1,309 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+
+
+<!-- Mirrored from themesdesign.in/joobsy/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Nov 2019 13:17:31 GMT -->
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Joobsy - Responsive Landing Page Tamplate</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Themesdesign" />
+
+    <link rel="shortcut icon" href="images/favicon.ico">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Rubik:400,500" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css">
+
+    <!--Material Icon -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/materialdesignicons.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="/Public/css/fontawesome.css" />
+
+    <!-- selectize css -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/selectize.css" />
+
+    <!--Slider-->
+    <link rel="stylesheet" href="/Public/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/Public/css/owl.theme.css" />
+    <link rel="stylesheet" href="/Public/css/owl.transitions.css" />
+
+    <!-- Custom  Css -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/style.css" />
+
 </head>
+
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+
+    <!-- Navigation Bar-->
+    <header id="topnav" class="defaultscroll scroll-active">
+        <div class="tagline">
+            <div class="container">
+                <div class="float-left">
+                    <div class="phone">
+                        <i class="mdi mdi-phone-classic"></i> +1 800 123 45 67
+                    </div>
+                    <div class="email">
+                        <a href="#">
+                            <i class="mdi mdi-email"></i> Support@mail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <ul class="topbar-list list-unstyled d-flex" style="margin: 11px 0px;">
+                        <li class="list-inline-item"><a href="javascript:void(0);"><i class="mdi mdi-account mr-2"></i>Benny Simpson</a></li>
+                        <li class="list-inline-item">
+                            <a href="javascript:void(0);">
+                                <select id="select-lang" class="demo-default" placeholder="Language">
+                                    <option value="">Language</option>
+                                    <option value="4">English</option>
+                                    <option value="1">Spanish</option>
+                                    <option value="3">French</option>
+                                    <option value="5">Hindi</option>
+                                </select>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
             </div>
         </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <div class="container">
+            <!-- Logo container-->
+            <div>
+                <a href="index-2.html" class="logo">
+                    <img src="images/logo-light.png" alt="" class="logo-light" height="28" />
+                    <img src="images/logo-dark.png" alt="" class="logo-dark" height="28" />
+                </a>
+            </div>
+            <!-- End Logo container-->
+            <div class="menu-extras">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+                <div class="menu-item">
+                    <!-- Mobile menu toggle-->
+                    <a class="navbar-toggle">
+                        <div class="lines">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                    <!-- End mobile menu toggle-->
+                </div>
+            </div>
+
+            <div id="navigation">
+
+                <!-- Navigation Menu-->
+                <ul class="navigation-menu">
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("index","home")">Home</a>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#">Jobs</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("list","jobs")">Job List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Grid","jobs")">Job Grid</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Details","jobs")">Job Details</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Details2","jobs")">Job Details-2</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Candidates</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("Listing","Candidates")">Candidates Listing</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Profile","Candidates")">Candidates Profile</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("CreateResume","Candidates")">Create Resume</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Employers</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("List","Employers")">Employers List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Detail","Employers")">Company Detail</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#">Blog</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="@Url.Action("List","Blog")">Blog List</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Details","Blog")">Blog Details</a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Grid","Blog")">Blog Grid</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="#">Pages</a>
+                        <span class="menu-arrow"></span>
+                        <ul class="submenu">
+                            <li>
+                                <a href="about.html">About us</a>
+                            </li>
+                            <li>
+                                <a href="services.html">Services</a>
+                            </li>
+                            <li>
+                                <a href="team.html">Team</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">Faqs</a>
+                            </li>
+                            <li>
+                                <a href="pricing.html">Pricing plans</a>
+                            </li>
+                            <li>
+                                <a href="#ModalCenter" class="nav-link" data-toggle="modal" data-target="#ModalCenter">Log in</a>
+                            </li>
+                            <li>
+                                <a href="#ModalCenter1" class="nav-link" data-toggle="modal" data-target="#ModalCenter1">Register</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="has-submenu">
+                        <a href="@Url.Action("index", "contact")">contact</a>
+                    </li>
+                    <a href="post-a-job.html" class="btn btn-custom btn-sm"><i class="mdi mdi-cloud-upload"></i> Post a Job</a>
+
+                </ul>
+                <!-- End navigation menu-->
+            </div>
+        </div>
+    </header>
+    <!-- End Navigation Bar-->
+
+    @RenderBody()
+
+    <!-- footer start -->
+    <footer class="footer pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="text-dark">
+                        <h3 class="mb-4 footer-list-title text-white f-17">Joobsy</h3>
+                        <p class="footer-desc">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                        <ul class="footer-icons list-inline mb-4">
+                            <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-instagram"></i></a></li>
+                            <li class="list-inline-item"><a href="#" class=""><i class="mdi mdi-google"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Company</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Media & Press</a></li>
+                                    <li><a href="#">Career</a></li>
+                                    <li><a href="#">Blog</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Resources</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="#">Help & Support</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">More Info</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="#">Pricing</a></li>
+                                    <li><a href="#">For Marketing</a></li>
+                                    <li><a href="#">For CEOs </a></li>
+                                    <li><a href="#">For Agencies</a></li>
+                                    <li><a href="#">Our Apps</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div>
+                                <p class="text-white mb-4 footer-list-title f-17">Help center</p>
+                                <ul class="list-unstyled footer-list-menu">
+                                    <li><a href="#">Accounting </a></li>
+                                    <li><a href="#">Billing</a></li>
+                                    <li><a href="#">General Question</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+    <!-- footer-alt start -->
+    <section class="footer-alt pt-3 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <p class="copyright mb-0">2019 © Joobsy. Design By Themesdesign</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer-alt end -->
+    <!-- javascript -->
+    <script src="/Public/js/jquery.min.js"></script>
+    <script src="/Public/js/bootstrap.bundle.min.js"></script>
+    <script src="/Public/js/jquery.easing.min.js"></script>
+    <script src="/Public/js/plugins.js"></script>
+
+    <!-- selectize js -->
+    <script src="/Public/js/selectize.min.js"></script>
+    <script src="/Public/js/jquery.nice-select.min.js"></script>
+
+    <script src="/Public/js/owl.carousel.min.js"></script>
+    <script src="/Public/js/counter.int.js"></script>
+
+    <script src="/Public/js/app.js"></script>
+    <script src="/Public/js/home.js"></script>
+
 </body>
+
+<!-- Mirrored from themesdesign.in/joobsy/ by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 25 Nov 2019 13:18:00 GMT -->
 </html>
