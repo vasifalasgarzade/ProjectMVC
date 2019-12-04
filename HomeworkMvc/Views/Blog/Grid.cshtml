@@ -1,4 +1,4 @@
-﻿
+﻿@model List<HomeworkMvc.Models.BlogGrid>
 @{
     ViewBag.Title = "Grid";
 }
@@ -17,7 +17,7 @@
                             <li class="breadcrumb-item"><a href="#">Joobsy</a></li>
                             <li class="breadcrumb-item"><a href="#">Blog</a></li>
                             <li class="breadcrumb-item active">Blog Post</li>
-                        </ol>
+                        </olh
                     </div>
                 </div>
             </div>
@@ -157,221 +157,83 @@
             </div>
 
             <div class="col-lg-8">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-1.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">The Big Oxmox advised Commas.</a></h6>
-                                <p class="f-14 text-muted mb-0">It is a paradisematic country that s in which roasted sentencesin your mouth Even by the all-powerful Pointing has control.</p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Jack Berry</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
+                @foreach (var item in Model)
+                {
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="job-detail mt-4">
+                                <div class="blog-post-img">
+                                    <img src="/Public/images/blog-post/@item.PhotoItem" alt="" class="img-fluid mx-auto d-block rounded-top">
+                                </div>
+                                <div class="p-2">
+                                    <ul class="list-inline mb-2">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-dark">
+                                                <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item float-right">
+                                            <a href="#" class="text-dark">
+                                                <p class="text-dark mb-0"><i class="@item.Icon mr-2"></i>Comments</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h6><a href="#" class="text-dark">@item.Title</a></h6>
+                                    <p class="f-14 text-muted mb-0">@item.Text</p>
+                                    <hr class="mt-2 mb-2">
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-dark">
+                                                <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> @item.WhoFrom</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item float-right">
+                                            <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>@item.DateTime.ToString("yyyy.MMM.dd")</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-2.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">Sed consequat eget bibendum augue.</a></h6>
-                                <p class="f-14 text-muted mb-0">Cursus nunc quis gravida a magna mi a libero fusce vulputate eleifend sapien vestibulum purus quam scelerisque.</p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Pamela Boyer</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
+                        <div class="col-md-6">
+                            <div class="job-detail mt-4">
+                                <div class="blog-post-img">
+                                    <img src="/Public/images/blog-post/@item.PhotoItem" alt="" class="img-fluid mx-auto d-block rounded-top">
+                                </div>
+                                <div class="p-2">
+                                    <ul class="list-inline mb-2">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-dark">
+                                                <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item float-right">
+                                            <a href="#" class="text-dark">
+                                                <p class="text-dark mb-0"><i class="@item.Icon mr-2"></i>Comments</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <h6><a href="#" class="text-dark">@item.Title.</a></h6>
+                                    <p class="f-14 text-muted mb-0">@item.Text</p>
+                                    <hr class="mt-2 mb-2">
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            <a href="#" class="text-dark">
+                                                <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> @item.WhoFrom</p>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item float-right">
+                                            <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>@item.DateTime.ToString("yyyy.MMM.dd")</p>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-3.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">Nunc nec neque phasellus leo dolor.</a></h6>
-                                <p class="f-14 text-muted mb-0">Fusce pharetra convallis urna quisque ut nisi sonec mi odio faucibus at scelerisqu quis convallis nisi suspendisse.</p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Myron Akers</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-4.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">Maecenas malesuada congue massa.</a></h6>
-                                <p class="f-14 text-muted mb-0">Etiam sollicitudin ipsum eu pulvinar as rutrum tellus ipsum laoreet sapien quis venenatis ante odio sitamet eros.</p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Myra Brien</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-5.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">Phasellus consectetuer vestibulum.</a></h6>
-                                <p class="f-14 text-muted mb-0">Duis vel nibh at velit as scelerisque suscipit curabitur turpis dignissim a vestibulum suscipit commodo nullaquis orci. </p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Isidro Tate</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="job-detail mt-4">
-                            <div class="blog-post-img">
-                                <img src="/Public/images/blog-post/img-6.jpg" alt="" class="img-fluid mx-auto d-block rounded-top">
-                            </div>
-                            <div class="p-2">
-                                <ul class="list-inline mb-2">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 f-17"><i class="mdi mdi-heart-outline mr-1 text-custom"></i>Like</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <a href="#" class="text-dark">
-                                            <p class="text-dark mb-0"><i class="mdi mdi-comment-multiple mr-2"></i>Comments</p>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <h6><a href="#" class="text-dark">Curabitur vestibulum as aliquam.</a></h6>
-                                <p class="f-14 text-muted mb-0">Sed mollis that eros et ultrices tempu mauris ipsum aliquam libero non adipiscing dolor urna a orci nullaporta dolor.</p>
-                                <hr class="mt-2 mb-2">
-                                <ul class="list-inline mb-0">
-                                    <li class="list-inline-item">
-                                        <a href="#" class="text-dark">
-                                            <p class="mb-0 text-muted"><i class="mdi mdi-account mr-1"></i><span class="text-custom">By</span> Earl Baxter</p>
-                                        </a>
-                                    </li>
-                                    <li class="list-inline-item float-right">
-                                        <p class="text-muted mb-0"><i class="mdi mdi-calendar-text mr-1"></i>10-Sep-2018</p>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 

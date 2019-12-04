@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeworkMvc.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,15 @@ namespace HomeworkMvc.Controllers
 {
     public class EmployersController : Controller
     {
+        public MvcProjectdb db;
+        public EmployersController()
+        {
+            db = new MvcProjectdb();
+        }
         // GET: Employers
         public ActionResult List()
         {
-            return View();
+            return View(db.EmployersLists.ToList());
         }
         public ActionResult Detail()
         {

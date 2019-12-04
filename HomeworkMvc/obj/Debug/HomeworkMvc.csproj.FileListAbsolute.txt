@@ -77,4 +77,8 @@ C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.d
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.SqlServer.dll
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.xml
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\bin\EntityFramework.SqlServer.xml
+C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.Migrations.firstmigration.resources
+C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csproj.GenerateResource.cache
 C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.csprojAssemblyReference.cache
+C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.Migrations.updatemigration.resources
+C:\Users\Vasif\Desktop\mvc_project\HomeworkMvc\HomeworkMvc\obj\Debug\HomeworkMvc.Migrations.photouploadsedit.resources

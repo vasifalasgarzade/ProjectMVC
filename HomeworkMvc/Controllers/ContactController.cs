@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeworkMvc.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,11 @@ namespace HomeworkMvc.Controllers
 {
     public class ContactController : Controller
     {
+        public MvcProjectdb db;
+        public ContactController()
+        {
+            db = new MvcProjectdb();
+        }
         // GET: Contact
         public ActionResult Index()
         {

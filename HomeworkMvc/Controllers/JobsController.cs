@@ -1,25 +1,46 @@
-﻿using System;
+﻿using HomeworkMvc.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HomeworkMvc.ViewModels;
 
 namespace HomeworkMvc.Controllers
 {
     public class JobsController : Controller
     {
+
+        public MvcProjectdb db;
+        public JobsController()
+        {
+            db = new MvcProjectdb();
+        }
         // GET: Jobs
         public ActionResult List()
         {
-            return View();
+            JobViewModel model = new JobViewModel
+            {
+                JobLists = db.JobLists.ToList()
+            };
+            return View(model);
         }
         public ActionResult Grid()
         {
-            return View();
+            JobViewModel model = new JobViewModel
+            {
+                JobsGrids = db.JobsGrids.ToList()
+            };
+            return View(model);
         }
         public ActionResult Details()
         {
-            return View();
+            JobViewModel model = new JobViewModel
+            {
+                jobDetail = db.JobDetails.FirstOrDefault(),
+                jobDetails = db.JobDetails.ToList()
+            };
+            return View(model);
         }
         public ActionResult Details2()
         {
